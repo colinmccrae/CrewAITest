@@ -9,9 +9,9 @@ os.environ["OPENAI_API_KEY"] = os.getenv("OPENAI_API_KEY") # Check OpenAI usage 
 os.environ["SERPER_API_KEY"] = os.getenv("SERPER_API_KEY")  # serper.dev API key, check usage here: https://serper.dev/dashboard
 
 from langchain_openai import ChatOpenAI # See list of OpenAI models here: https://platform.openai.com/docs/models/gpt-4-turbo-and-gpt-4
-model_cloud = ChatOpenAI(model='gpt-4-turbo') # Use GPT-4-Turbo
-# model_cloud = ChatOpenAI(model='gpt-4') # Use GPT-4
-# model_cloud = ChatOpenAI(model='gpt-3.5-turbo') # Use GPT-3.5 Turbo
+model_cloud = ChatOpenAI(model = 'gpt-4-turbo') # Use GPT-4-Turbo
+# model_cloud = ChatOpenAI(model = 'gpt-4') # Use GPT-4
+# model_cloud = ChatOpenAI(model = 'gpt-3.5-turbo') # Use GPT-3.5 Turbo
 
 from langchain_community.llms import Ollama # See list of local models on Ollama here: https://ollama.com/library
 # model_local = Ollama(model = "ollama run llama3:70b-instruct-q2_K") # This is the smallest Llama 3 70b model. Quantization: 2-bit, Size: 26GB. Runs extremely slow. Maybe 0.5 words per second.

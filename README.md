@@ -14,7 +14,7 @@ Each agent can use either a local Large Language Models (LLMs) using Ollama (suc
 
 1. Download and install [Ollama](https://ollama.com/).
 
-2. Visit [Ollama's LLM Library](https://ollama.com/library) and choose which local model(s) you want. To start with I recommend one of [Google's tiny Phi-3 model](https://ollama.com/library/phi3).
+2. Visit [Ollama's LLM Library](https://ollama.com/library) and choose which local model(s) you want. To start with I recommend [Google's tiny Phi-3 model](https://ollama.com/library/phi3).
 
 3. Download and run the model via Windows command line. To download and run Google's tiny Phi-3 3.8b model (uses just 2.3 GB of disk space), simply open a Windows Terminal and type:
 
@@ -30,7 +30,7 @@ Each agent can use either a local Large Language Models (LLMs) using Ollama (suc
 
 5. Clone this repository:
 
-`git clone <repo-url>`
+`git clone https://github.com/colinmccrae/CrewAITest/`
 
 6. Navigate to the project directory:
 
@@ -68,6 +68,8 @@ SERPER_API_KEY = "your_serper_api_key"
 ```
 
 13. Execute any of the CrewAI Python scripts. For example: `python crewaih2g.py`
+
+Note: These are set to use GPT-4-Turbo by default, so you will require API access for these files to run and it will cost you money.
 
 Note: If you get the error "Microsoft Visual C++ 14.0 or greater is required" then install Microsoft Visual C++ Build Tools from [here](https://visualstudio.microsoft.com/visual-cpp-build-tools/).
 
