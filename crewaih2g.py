@@ -17,9 +17,9 @@ model_cloud = ChatOpenAI(model = 'gpt-4o') # Use GPT-4o
 from langchain_community.llms import Ollama # See list of local models on Ollama here: https://ollama.com/library
 # model_local = Ollama(model = "ollama run llama3:70b-instruct-q2_K") # This is the smallest Llama 3 70b model. Quantization: 2-bit, Size: 26GB. Runs extremely slow. Maybe 0.5 words per second.
 # model_local = Ollama(model = "llama3:8b-instruct-fp16") # This is the best possible Llama 3 8b model. Quantization: F16, Size: 16GB. Runs slow, but manageable for non interactive runs. Maybe 4 words per second.
-# model_local = Ollama(model = "llama3:instruct") # The default Llama 3 8b model. Quantization: 4-bit, Size: 4.7GB. Runs medium speed. Can do an entire prompt in 10-20s. Can use for interactive runs.
+model_local = Ollama(model = "llama3:instruct") # The default Llama 3 8b model. Quantization: 4-bit, Size: 4.7GB. Runs medium speed. Can do an entire prompt in 10-20s. Can use for interactive runs.
 # model_local = Ollama(model = "phi3:3.8b-mini-instruct-4k-fp16") # A bigger version of Google Phi3 LLM. Quantization: F16, Size: 7.6GB. Medium speed.
-model_local = Ollama(model = "phi3:instruct") # A tiny but good Google Phi3 LLM. Quantization: 4-bit, Size: 2.3GB. Fast.
+# model_local = Ollama(model = "phi3:instruct") # A tiny but good Google Phi3 LLM. Quantization: 4-bit, Size: 2.3GB. Fast.
 
 # Creating a senior researcher agent with memory and verbose mode
 researcher = Agent(
