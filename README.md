@@ -7,8 +7,9 @@ Each agent can use either a local Large Language Models (LLMs) using Ollama (suc
 ## Installation Instructions
 
 ### Prerequisites
-- Python 3.x and Pip Python package manager installed
-- Internet access to install dependencies.
+- [Python 3.x and Pip](https://www.python.org/) Python package manager installed
+- [Git](https://git-scm.com/) distributed version control system installed
+- [Microsoft Visual C++ Build Tools](https://visualstudio.microsoft.com/visual-cpp-build-tools/) installed. If not run the installer, and select 'Desktop development with C++'.
 
 ### Installation Steps
 
@@ -44,15 +45,11 @@ Each agent can use either a local Large Language Models (LLMs) using Ollama (suc
 
 9. Install / upgrade [CrewAI](https://www.crewai.com/) and its tools package
 
-```pip install -U crewai```
+```pip install -U crewai 'crewai[tools]'```
 
-```pip install -U 'crewai[tools]'```
+10. Install / upgrade [Langchain](https://www.langchain.com/) Community and OpenAI packages for interfacing with Ollama and OpenAI respectively. There may be some dependency version conflicts, however it seems to work fine regardless.
 
-10. Install / upgrade [Langchain](https://www.langchain.com/) Community and OpenAI packages for interfacing with Ollama and OpenAI respectively.
-
-```pip install -U langchain-community```
-
-```pip install -U langchain-openai```
+```pip install -U langchain-community langchain-openai```
 
 11. Create a new file called '.env'.
 
@@ -71,7 +68,8 @@ SERPER_API_KEY = "your_serper_api_key"
 
 Note: These are set to use GPT-4-Turbo by default, so you will require API access for these files to run and it will cost you money.
 
-Note: If you get the error "Microsoft Visual C++ 14.0 or greater is required" then install Microsoft Visual C++ Build Tools from [here](https://visualstudio.microsoft.com/visual-cpp-build-tools/).
+Note: If you get the error "Microsoft Visual C++ 14.0 or greater is required" then install Microsoft Visual C++ Build Tools from [here](https://visualstudio.microsoft.com/visual-cpp-build-tools/). Run the installer, and select 'Desktop development with C++'.
+
 
 
 ## Local LLMs with Ollama
