@@ -21,8 +21,8 @@ model_local = Ollama(model = "llama3:instruct") # The default Llama 3 8b model. 
 # model_local = Ollama(model = "phi3:3.8b-mini-instruct-4k-fp16") # A bigger version of Google Phi3 LLM. Quantization: F16, Size: 7.6GB. Medium speed.
 # model_local = Ollama(model = "phi3:instruct") # A tiny but good Google Phi3 LLM. Quantization: 4-bit, Size: 2.3GB. Fast.
 
-# email = "Hi, I'm a Nigerian prince and I need your bank details to transfer $10m"
-email = "Hi, this is John your neighbour - your house is on fire!"
+email = "Hi, I'm a Nigerian prince and I need your bank details to transfer $10m"
+# email = "Hi, this is John your neighbour - your house is on fire!"
 
 # Creating an email classifier agent with verbose mode
 classifier = Agent(
