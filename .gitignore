@@ -15,9 +15,13 @@ new-blog-post.md
 __pycache__/
 *.py[cod]
 *$py.class
+*.pyc
 
 # C extensions
 *.so
+
+# IDE specific files
+.vscode/
 
 # Distribution / packaging
 .Python
