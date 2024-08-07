@@ -8,14 +8,30 @@ if %errorlevel% neq 0 (
     exit /b 1
 )
 
-:: Step 2: Install or update dependencies from requirements.txt
+:: Step 2: Create a virtual environment
+if not exist "venv" (
+    echo Creating virtual environment...
+    python -m venv venv
+    if %errorlevel% neq 0 (
+        echo Failed to create virtual environment.
+        exit /b 1
+    )
+)
+
+:: Step 3: Activate the virtual environment
+call venv\Scripts\activate
+if %errorlevel% neq 0 (
+    echo Failed to activate virtual environment.
+    exit /b 1
+)
+
+:: Step 4: Install or update dependencies from requirements.txt
 pip install -r requirements.txt -U
-:: If a requirements.txt doesn't exist, provide an error message
 if errorlevel 1 (
     echo Error installing or updating dependencies. Check requirements.txt for errors.
 )
 
-:: Step 3: Check for the existence of .env file and set environment variables
+:: Step 5: Check for the existence of .env file and set environment variables
 if not exist ".env" (
     echo .env file not found. Creating a sample .env file.
     (
@@ -36,3 +52,8 @@ if not exist ".env" (
         )
     )
 )
+
+:: Deactivate the virtual environment
+deactivate
+
+echo Setup complete. To activate the virtual environment, run: venv\Scripts\activate

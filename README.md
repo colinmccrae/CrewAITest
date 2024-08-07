@@ -19,37 +19,37 @@ Each agent can use either a local Large Language Models (LLMs) using Ollama (suc
 
 3. Download and run the model via Windows command line. To download and run Google's tiny Phi-3 3.8b model (uses just 2.3 GB of disk space), simply open a Windows Terminal and type:
 
-`ollama run phi3:instruct`
+    `ollama run phi3:instruct`
 
 4. (OPTIONAL) Download and run any other open source models you want to have locally. The best ones I've found for my laptop (16 GB GPU RAM) are:
 
-`ollama run llama3:8b-instruct-fp16`
+    `ollama run llama3:8b-instruct-fp16`
 
-`ollama run llama3:instruct`
+    `ollama run llama3:instruct`
 
-`ollama run phi3:3.8b-mini-instruct-4k-fp16`
+    `ollama run phi3:3.8b-mini-instruct-4k-fp16`
 
 5. Clone this repository:
 
-`git clone https://github.com/colinmccrae/CrewAITest/`
+    `git clone https://github.com/colinmccrae/CrewAITest/`
 
 6. Navigate to the project directory:
 
-`cd CrewAITest`
+    `cd CrewAITest`
 
-7. Run the installation script: `install.bat`. If you do this you can move straight to Step 12. If you don't want to run this batch file, you can alternatively manually install the dependencies as per Steps 8-11.
+7. Run the installation script: `install.bat`. If you do this you can move straight to Step 12. If you don't want to run this batch file, you can alternatively manually swtich to a virtual environment and install the dependencies as per Steps 8-11.
 
-8. Install / upgrade Python's environment variables library
+8. Create a virtual environment:
 
-```pip install -U python-dotenv```
+    `python -m venv venv`
 
-9. Install / upgrade [CrewAI](https://www.crewai.com/) and its tools package
+9. Activate the virtual environment:
 
-```pip install -U crewai 'crewai[tools]'```
+    `venv\Scripts\activate`
 
-10. Install / upgrade [Langchain](https://www.langchain.com/) Community and OpenAI packages for interfacing with Ollama and OpenAI respectively. There may be some dependency version conflicts, however it seems to work fine regardless.
+10. Install dependencies from requirements.txt
 
-```pip install -U langchain-community langchain-openai```
+    `pip install -r requirements.txt -U`
 
 11. Create a new file called '.env'.
 
